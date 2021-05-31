@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Authors>Kevin Schneider, Jonathan Ott, Benedikt Venn, Lukas Weil, David Zimmer, CSB OSS contributors</Authors>
+    <Description>BIO-BTE-12-V-4-Solutions</Description>
+    <Summary>Solutions for the course Scientific programming for biologists (BIO-BTE-12-V-4)</Summary>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIconUrl>https://csbiology.github.io/BIO-BTE-12-V-4/img/logo.png</PackageIconUrl>
+    <FsDocsLogoSource>https://csbiology.github.io/BIO-BTE-12-V-4/img/logo.png</FsDocsLogoSource>
+  </PropertyGroup>
+
+</Project>
