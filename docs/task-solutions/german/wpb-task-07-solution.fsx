@@ -254,7 +254,7 @@ let terawattstundenDeutschland2020 =
     |> List.sortBy fst
 
 
-Chart.Point(terawattstundenDeutschland2010)
+Chart.Point(terawattstundenDeutschland2020)
 |> Chart.withMarginSize(Left=250.)
 |> Chart.withMarkerStyle 20
 |> Chart.withX_Axis (myLinearAxis "Erzeugte Energie [tWh]" false)
