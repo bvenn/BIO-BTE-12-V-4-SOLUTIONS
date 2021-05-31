@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Task05 - Programming with Objects
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="/BIO-BTE-12-V-4-SOLUTIONS//img/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+
+    <link type="text/css" rel="stylesheet" href="/BIO-BTE-12-V-4-SOLUTIONS/content/fsdocs-default.css" />
+    <link type="text/css" rel="stylesheet" href="/BIO-BTE-12-V-4-SOLUTIONS/content/fsdocs-custom.css" />
+    <script type="text/javascript" src="/BIO-BTE-12-V-4-SOLUTIONS/content/fsdocs-tips.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-collapsible@1.0.4/dist/js/bulma-collapsible.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-collapsible@1.0.4/dist/css/bulma-collapsible.min.css">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- BEGIN SEARCH BOX: this adds support for the search box -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.css" />
+    <!-- END SEARCH BOX: this adds support for the search box -->
+    
+</head> 
+
+<body>
+    <div class="columns is-fullheight m-0">
+        <div id="fsdocs-menu" class="column is-2 is-paddingless">
+            <aside class="menu">
+                <div class="container is-paddingless is-marginless has-background-dark">
+                    <a href="/BIO-BTE-12-V-4-SOLUTIONS/">
+                        <figure class="image is-128x128 container">
+                            <img src="/BIO-BTE-12-V-4-SOLUTIONS/img/logo.png">
+                        </figure>
+                    </a>
+                    <h2 class="title has-text-centered has-text-white pb-4">BIO-BTE-12-V-4-SOLUTIONS</h2>
+                </div>
+                <div class="content">
+                    <!-- BEGIN SEARCH BOX: this adds support for the search box -->
+                    <div id="header">
+                        <div class="field">
+                            <div class="control has-icons-left has-icons-right searchbox" id="fsdocs-searchbox">
+                                <input data-search-input="" id="search-by" type="search" placeholder="Search..." class="input"/>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END SEARCH BOX: this adds support for the search box -->
+                    <ul class="navbar-nav">
+                        <li class="nav-header">
+  Documentation
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="/BIO-BTE-12-V-4-SOLUTIONS/task-solutions/german/wpb-task-04-solution.html">
+    Task04 - Programming with functions
+
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="/BIO-BTE-12-V-4-SOLUTIONS/task-solutions/german/wpb-task-05-solution.html">
+    Task05 - Programming with Objects
+
+  </a>
+</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+        <div class="column is-10 is-paddingless">
+            <div class="section pt-4">
+                <div class="container" id="fsdocs-content">
+                    <p><a href="https://mybinder.org/v2/gh/csbiology/BIO-BTE-12-V-4/gh-pages?filepath=task-solutions/german/wpb-task-05-solution.ipynb"><img src="/BIO-BTE-12-V-4-SOLUTIONS/img/badge-binder.svg" alt="Binder" /></a>&emsp;
+<a href="/BIO-BTE-12-V-4-SOLUTIONS/task-solutions/german/wpb-task-05-solution.fsx"><img src="/BIO-BTE-12-V-4-SOLUTIONS/img/badge-script.svg" alt="Script" /></a>&emsp;
+<a href="/BIO-BTE-12-V-4-SOLUTIONS/task-solutions/german/wpb-task-05-solution.ipynb"><img src="/BIO-BTE-12-V-4-SOLUTIONS/img/badge-notebook.svg" alt="Notebook" /></a></p>
+<h1><a name="Task05-Programming-with-Objects" class="anchor" href="#Task05-Programming-with-Objects">Task05 - Programming with Objects</a></h1>
+<h2><a name="Veränderliche-Werte" class="anchor" href="#Veränderliche-Werte">Veränderliche Werte</a></h2>
+<h3><a name="Task-1-1" class="anchor" href="#Task-1-1">Task 1.1:</a></h3>
+<p>Erstellen und Verändern von veränderlichen Werten</p>
+<p>Tipp:</p>
+<ul>
+<li>Benutzt das <code>mutable</code> keyword</li>
+<li>Zur Veränderung der Werte wird der <code>&lt;-</code> Operator verwendet</li>
+</ul>
+<h3><a name="Subtask-1-1-1" class="anchor" href="#Subtask-1-1-1">Subtask 1.1.1</a></h3>
+<p>Erstelle einen veränderlichen Integer mit dem Wert 1 und bindet ihn an den Namen x</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span class="k">mutable</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="mv">x</span> <span class="o">=</span> <span class="n">1</span>
+</code></pre>
+<h3><a name="Subtask-1-1-2" class="anchor" href="#Subtask-1-1-2">Subtask 1.1.2</a></h3>
+<p>Verändere den Wert der an x gebunden ist indem ihr den Wert den x trägt mit 5 multipliziert</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span onmouseout="hideTip(event, 'fs1', 2)" onmouseover="showTip(event, 'fs1', 2)" class="mv">x</span> <span class="k">&lt;-</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="mv">x</span> <span class="o">*</span> <span class="n">5</span><span class="pn">)</span>
+</code></pre>
+<h3><a name="Subtask-1-1-3" class="anchor" href="#Subtask-1-1-3">Subtask 1.1.3</a></h3>
+<p>Erstelle einen Record Type <code>Mensch</code> mit</p>
+<ul>
+<li>dem unveränderlichen Feld <code>Name</code> vom Typ string</li>
+<li>und dem veränderlichen Feld <code>Alter</code> vom Typ int</li>
+</ul>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">type</span> <span onmouseout="hideTip(event, 'fs2', 4)" onmouseover="showTip(event, 'fs2', 4)" class="rt">Mensch</span> <span class="o">=</span>
+    <span class="pn">{</span>
+        <span onmouseout="hideTip(event, 'fs3', 5)" onmouseover="showTip(event, 'fs3', 5)" class="prop">Name</span> <span class="pn">:</span> <span onmouseout="hideTip(event, 'fs4', 6)" onmouseover="showTip(event, 'fs4', 6)" class="rt">string</span>
+        <span class="k">mutable</span> <span onmouseout="hideTip(event, 'fs5', 7)" onmouseover="showTip(event, 'fs5', 7)" class="prop">Alter</span> <span class="pn">:</span> <span onmouseout="hideTip(event, 'fs6', 8)" onmouseover="showTip(event, 'fs6', 8)" class="vt">int</span>
+    <span class="pn">}</span>
+</code></pre>
+<h3><a name="Subtask-1-1-4" class="anchor" href="#Subtask-1-1-4">Subtask 1.1.4</a></h3>
+<p>Erstelle die Funktion <code>geburtstagFeiern</code> die als Parameter einen Wert des Typen <code>Mensch</code> erhält und das Alter des Menschen um eins erhöht</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs7', 9)" onmouseover="showTip(event, 'fs7', 9)" class="fn">geburtstagFeiern</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs8', 10)" onmouseover="showTip(event, 'fs8', 10)" class="fn">m</span> <span class="pn">:</span> <span onmouseout="hideTip(event, 'fs2', 11)" onmouseover="showTip(event, 'fs2', 11)" class="rt">Mensch</span><span class="pn">)</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs8', 12)" onmouseover="showTip(event, 'fs8', 12)" class="fn">m</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs5', 13)" onmouseover="showTip(event, 'fs5', 13)" class="id">Alter</span> <span class="k">&lt;-</span> <span onmouseout="hideTip(event, 'fs8', 14)" onmouseover="showTip(event, 'fs8', 14)" class="fn">m</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs5', 15)" onmouseover="showTip(event, 'fs5', 15)" class="id">Alter</span> <span class="o">+</span> <span class="n">1</span>
+</code></pre>
+<h3><a name="Subtask-1-1-5" class="anchor" href="#Subtask-1-1-5">Subtask 1.1.5</a></h3>
+<p>Erstelle einen Menschen, binde ihn an einen Namen und lass diesen erstellten Menschen mit der Funktion <code>geburtstagFeiern</code> altern.</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs9', 16)" onmouseover="showTip(event, 'fs9', 16)" class="id">mensch1</span> <span class="o">=</span> <span class="pn">{</span> <span class="prop">Name</span> <span class="o">=</span> <span class="s">&quot;Max&quot;</span><span class="pn">;</span> <span class="prop">Alter</span> <span class="o">=</span> <span class="n">22</span> <span class="pn">}</span>
+
+<span onmouseout="hideTip(event, 'fs7', 17)" onmouseover="showTip(event, 'fs7', 17)" class="fn">geburtstagFeiern</span> <span onmouseout="hideTip(event, 'fs9', 18)" onmouseover="showTip(event, 'fs9', 18)" class="id">mensch1</span>
+</code></pre>
+<h3><a name="Task-1-2-Bonusaufgabe-Veränderliche-Werte-in-Funktionen" class="anchor" href="#Task-1-2-Bonusaufgabe-Veränderliche-Werte-in-Funktionen">Task 1.2 (Bonusaufgabe) Veränderliche Werte in Funktionen</a></h3>
+<p>Erstelle eine eigene Version der <code>Array.max</code> Funktion. Diese Funktion soll ein Array von ints erhalten und den größten der ints zurückgeben.
+Signatur: <code>int [] -&gt; int</code></p>
+<p>Dabei soll der aktuell größte int ein <code>veränderlicher Wert</code> sein und es soll eine <code>for-Schleife</code> verwendet werden.</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs10', 19)" onmouseover="showTip(event, 'fs10', 19)" class="fn">arrayMax</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs11', 20)" onmouseover="showTip(event, 'fs11', 20)" class="fn">array</span> <span class="pn">:</span> <span onmouseout="hideTip(event, 'fs6', 21)" onmouseover="showTip(event, 'fs6', 21)" class="vt">int</span><span class="pn">[</span><span class="pn">]</span><span class="pn">)</span> <span class="o">=</span> 
+    <span class="k">let</span> <span class="k">mutable</span> <span onmouseout="hideTip(event, 'fs12', 22)" onmouseover="showTip(event, 'fs12', 22)" class="mv">maxValue</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs11', 23)" onmouseover="showTip(event, 'fs11', 23)" class="fn">array</span><span class="id">.</span><span class="pn">[</span><span class="n">0</span><span class="pn">]</span> 
+    <span class="k">for</span> <span onmouseout="hideTip(event, 'fs13', 24)" onmouseover="showTip(event, 'fs13', 24)" class="fn">i</span> <span class="k">in</span> <span onmouseout="hideTip(event, 'fs11', 25)" onmouseover="showTip(event, 'fs11', 25)" class="fn">array</span> <span class="k">do</span>
+        <span class="k">if</span> <span onmouseout="hideTip(event, 'fs13', 26)" onmouseover="showTip(event, 'fs13', 26)" class="fn">i</span> <span class="o">&gt;</span> <span onmouseout="hideTip(event, 'fs12', 27)" onmouseover="showTip(event, 'fs12', 27)" class="mv">maxValue</span> <span class="k">then</span>
+            <span onmouseout="hideTip(event, 'fs12', 28)" onmouseover="showTip(event, 'fs12', 28)" class="mv">maxValue</span> <span class="k">&lt;-</span> <span onmouseout="hideTip(event, 'fs13', 29)" onmouseover="showTip(event, 'fs13', 29)" class="fn">i</span>
+    <span onmouseout="hideTip(event, 'fs12', 30)" onmouseover="showTip(event, 'fs12', 30)" class="mv">maxValue</span>
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs14', 31)" onmouseover="showTip(event, 'fs14', 31)" class="fn">arrayMax2</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs11', 32)" onmouseover="showTip(event, 'fs11', 32)" class="fn">array</span> <span class="pn">:</span> <span onmouseout="hideTip(event, 'fs6', 33)" onmouseover="showTip(event, 'fs6', 33)" class="vt">int</span><span class="pn">[</span><span class="pn">]</span><span class="pn">)</span> <span class="o">=</span> 
+    <span class="k">let</span> <span class="k">mutable</span> <span onmouseout="hideTip(event, 'fs12', 34)" onmouseover="showTip(event, 'fs12', 34)" class="mv">maxValue</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs11', 35)" onmouseover="showTip(event, 'fs11', 35)" class="fn">array</span><span class="id">.</span><span class="pn">[</span><span class="n">0</span><span class="pn">]</span> 
+    <span class="k">for</span> <span onmouseout="hideTip(event, 'fs13', 36)" onmouseover="showTip(event, 'fs13', 36)" class="fn">i</span> <span class="o">=</span> <span class="n">1</span> <span class="k">to</span> <span onmouseout="hideTip(event, 'fs11', 37)" onmouseover="showTip(event, 'fs11', 37)" class="fn">array</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs15', 38)" onmouseover="showTip(event, 'fs15', 38)" class="id">Length</span> <span class="o">-</span> <span class="n">1</span> <span class="k">do</span>
+        <span class="k">if</span> <span onmouseout="hideTip(event, 'fs11', 39)" onmouseover="showTip(event, 'fs11', 39)" class="fn">array</span><span class="id">.</span><span class="pn">[</span><span onmouseout="hideTip(event, 'fs13', 40)" onmouseover="showTip(event, 'fs13', 40)" class="fn">i</span><span class="pn">]</span> <span class="o">&gt;</span> <span onmouseout="hideTip(event, 'fs12', 41)" onmouseover="showTip(event, 'fs12', 41)" class="mv">maxValue</span> <span class="k">then</span>
+            <span onmouseout="hideTip(event, 'fs12', 42)" onmouseover="showTip(event, 'fs12', 42)" class="mv">maxValue</span> <span class="k">&lt;-</span> <span onmouseout="hideTip(event, 'fs11', 43)" onmouseover="showTip(event, 'fs11', 43)" class="fn">array</span><span class="id">.</span><span class="pn">[</span><span onmouseout="hideTip(event, 'fs13', 44)" onmouseover="showTip(event, 'fs13', 44)" class="fn">i</span><span class="pn">]</span>
+    <span onmouseout="hideTip(event, 'fs12', 45)" onmouseover="showTip(event, 'fs12', 45)" class="mv">maxValue</span>
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs16', 46)" onmouseover="showTip(event, 'fs16', 46)" class="id">array1</span> <span class="o">=</span> <span class="pn">[|</span><span class="n">4</span><span class="pn">;</span> <span class="n">23</span><span class="pn">;</span> <span class="n">6</span><span class="pn">;</span> <span class="n">4</span><span class="pn">;</span> <span class="n">7</span><span class="pn">|]</span>
+
+<span onmouseout="hideTip(event, 'fs10', 47)" onmouseover="showTip(event, 'fs10', 47)" class="fn">arrayMax</span> <span onmouseout="hideTip(event, 'fs16', 48)" onmouseover="showTip(event, 'fs16', 48)" class="id">array1</span>
+<span onmouseout="hideTip(event, 'fs14', 49)" onmouseover="showTip(event, 'fs14', 49)" class="fn">arrayMax2</span> <span onmouseout="hideTip(event, 'fs16', 50)" onmouseover="showTip(event, 'fs16', 50)" class="id">array1</span>
+</code></pre>
+<h2><a name="Vererbung" class="anchor" href="#Vererbung">Vererbung</a></h2>
+<h3><a name="Task-2-1-Erstellen-von-Klassen-und-Objekten" class="anchor" href="#Task-2-1-Erstellen-von-Klassen-und-Objekten">Task 2.1 Erstellen von Klassen und Objekten</a></h3>
+<h3><a name="Subtask-2-1-1" class="anchor" href="#Subtask-2-1-1">Subtask 2.1.1</a></h3>
+<p>Im folgenden wird die Klasse <code>Fahrzeug</code> erstellt. Versuche nachzuvollziehen, was passiert und kommentiere jede Zeile kurz</p>
+<p>Keywortfundgrube: Methode, Feld, Konstruktor, Parameter, alternativ, binden</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="c">// Kommentar: Es wird eine Klasse namens `Fahrzeug` erstellt, deren Hauptkonstruktor einen Parameter namens `hersteller` vom Typ string erh&#228;lt</span>
+<span class="k">type</span> <span onmouseout="hideTip(event, 'fs17', 51)" onmouseover="showTip(event, 'fs17', 51)" class="rt">Fahrzeug</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs18', 52)" onmouseover="showTip(event, 'fs18', 52)" class="fn">hersteller</span><span class="pn">:</span><span onmouseout="hideTip(event, 'fs4', 53)" onmouseover="showTip(event, 'fs4', 53)" class="rt">string</span><span class="pn">)</span> <span class="o">=</span>
+    <span class="c">// Kommentar: Ein Feld namens `Hersteller` wird definiert, an das der Wert des parameters `hersteller` gebunden wird</span>
+    <span class="k">member</span> <span onmouseout="hideTip(event, 'fs19', 54)" onmouseover="showTip(event, 'fs19', 54)" class="fn">self</span><span class="pn">.</span><span class="prop">Hersteller</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs18', 55)" onmouseover="showTip(event, 'fs18', 55)" class="fn">hersteller</span>
+    <span class="c">// Kommentar: Es wird eine parameterlose Methode namens `Fahren` definiert, welche &#252;ber die Selbstreferenz das Feld `Hersteller` verwendet</span>
+    <span class="k">member</span> <span onmouseout="hideTip(event, 'fs19', 56)" onmouseover="showTip(event, 'fs19', 56)" class="fn">self</span><span class="pn">.</span><span class="fn">Fahren</span><span class="pn">(</span><span class="pn">)</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs20', 57)" onmouseover="showTip(event, 'fs20', 57)" class="fn">printfn</span> <span class="s">&quot;</span><span class="pf">%s</span><span class="s"> macht brumm brumm&quot;</span> <span onmouseout="hideTip(event, 'fs19', 58)" onmouseover="showTip(event, 'fs19', 58)" class="fn">self</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs21', 59)" onmouseover="showTip(event, 'fs21', 59)" class="id">Hersteller</span>
+    <span class="c">// Kommentar: Ein parameterloser alternativer Konstruktor wird erstellt.</span>
+    <span class="k">new</span><span class="pn">(</span><span class="pn">)</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs17', 60)" onmouseover="showTip(event, 'fs17', 60)" class="fn">Fahrzeug</span><span class="pn">(</span><span class="s">&quot;VW&quot;</span><span class="pn">)</span>
+</code></pre>
+<h3><a name="Subtask-2-1-2" class="anchor" href="#Subtask-2-1-2">Subtask 2.1.2</a></h3>
+<p>Instanziiere 2 Objekte des Typs <code>Fahrzeug</code>. Verwende einmal den den Haupt- und einmal den alternativen Konstruktor</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs22', 61)" onmouseover="showTip(event, 'fs22', 61)" class="id">car1</span> <span class="o">=</span> <span class="k">new</span> <span onmouseout="hideTip(event, 'fs17', 62)" onmouseover="showTip(event, 'fs17', 62)" class="rt">Fahrzeug</span><span class="pn">(</span><span class="s">&quot;Ford&quot;</span><span class="pn">)</span>
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs23', 63)" onmouseover="showTip(event, 'fs23', 63)" class="id">car2</span> <span class="o">=</span> <span class="k">new</span> <span onmouseout="hideTip(event, 'fs17', 64)" onmouseover="showTip(event, 'fs17', 64)" class="rt">Fahrzeug</span><span class="pn">(</span><span class="pn">)</span>
+</code></pre>
+<h3><a name="Task-2-2-Vererbung" class="anchor" href="#Task-2-2-Vererbung">Task 2.2 Vererbung</a></h3>
+<h3><a name="Subtask-2-2-1" class="anchor" href="#Subtask-2-2-1">Subtask 2.2.1</a></h3>
+<p>Hier ist ein Beispiel für die Vererbung eines Typen, namentlich der Typ <code>Motorrad</code> der vom Typ <code>Fahrzeug</code> erbt.</p>
+<p>Erstelle analog einen Typen <code>Auto</code>, der auch vom Typ <code>Fahrzeug</code> erben soll. Dieser Typ soll aber zusätzlich das Feld <code>AnzahlTueren</code> enthalten.
+Wähle hierzu einen passenden primitiven Typen und passe auch den Konstruktor an, sodass diese Anzahl der Türen auch beim Instanziieren gesetzt werden kann.</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">type</span> <span onmouseout="hideTip(event, 'fs24', 65)" onmouseover="showTip(event, 'fs24', 65)" class="rt">Motorrad</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs18', 66)" onmouseover="showTip(event, 'fs18', 66)" class="fn">hersteller</span><span class="pn">:</span><span onmouseout="hideTip(event, 'fs4', 67)" onmouseover="showTip(event, 'fs4', 67)" class="rt">string</span><span class="pn">)</span> <span class="o">=</span>
+
+    <span class="k">inherit</span> <span onmouseout="hideTip(event, 'fs17', 68)" onmouseover="showTip(event, 'fs17', 68)" class="rt">Fahrzeug</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs18', 69)" onmouseover="showTip(event, 'fs18', 69)" class="fn">hersteller</span><span class="pn">)</span>
+
+    <span class="k">new</span><span class="pn">(</span><span class="pn">)</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs24', 70)" onmouseover="showTip(event, 'fs24', 70)" class="fn">Motorrad</span><span class="pn">(</span><span class="s">&quot;Kawasaki&quot;</span><span class="pn">)</span>
+
+<span class="k">type</span> <span onmouseout="hideTip(event, 'fs25', 71)" onmouseover="showTip(event, 'fs25', 71)" class="rt">Auto</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs18', 72)" onmouseover="showTip(event, 'fs18', 72)" class="fn">hersteller</span> <span class="pn">:</span> <span onmouseout="hideTip(event, 'fs4', 73)" onmouseover="showTip(event, 'fs4', 73)" class="rt">string</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs26', 74)" onmouseover="showTip(event, 'fs26', 74)" class="fn">anzahlTueren</span> <span class="pn">:</span> <span onmouseout="hideTip(event, 'fs6', 75)" onmouseover="showTip(event, 'fs6', 75)" class="vt">int</span><span class="pn">)</span> <span class="o">=</span>
+
+    <span class="k">inherit</span> <span onmouseout="hideTip(event, 'fs17', 76)" onmouseover="showTip(event, 'fs17', 76)" class="rt">Fahrzeug</span><span class="pn">(</span><span class="fn">hersteller</span><span class="pn">)</span>
+
+    <span class="k">member</span> <span onmouseout="hideTip(event, 'fs27', 77)" onmouseover="showTip(event, 'fs27', 77)" class="fn">self</span><span class="pn">.</span><span class="prop">AnzahlTueren</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs26', 78)" onmouseover="showTip(event, 'fs26', 78)" class="fn">anzahlTueren</span>
+
+    <span class="k">new</span><span class="pn">(</span><span class="pn">)</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs25', 79)" onmouseover="showTip(event, 'fs25', 79)" class="fn">Auto</span><span class="pn">(</span><span class="s">&quot;Mercedes&quot;</span><span class="pn">,</span><span class="n">4</span><span class="pn">)</span>
+</code></pre>
+<h3><a name="Subtask-2-2-2" class="anchor" href="#Subtask-2-2-2">Subtask 2.2.2</a></h3>
+<p>Erstelle eine Funktion, welche einen Parameter des Typs <code>Fahrzeug</code> enthält und die Methode <code>Fahren</code> dieses Fahrzeuges ausführt.</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs28', 80)" onmouseover="showTip(event, 'fs28', 80)" class="fn">fahren</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs29', 81)" onmouseover="showTip(event, 'fs29', 81)" class="fn">fahrzeug</span> <span class="pn">:</span> <span class="pn">#</span><span onmouseout="hideTip(event, 'fs17', 82)" onmouseover="showTip(event, 'fs17', 82)" class="rt">Fahrzeug</span><span class="pn">)</span> <span class="o">=</span>
+
+    <span onmouseout="hideTip(event, 'fs29', 83)" onmouseover="showTip(event, 'fs29', 83)" class="fn">fahrzeug</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs30', 84)" onmouseover="showTip(event, 'fs30', 84)" class="id">Fahren</span><span class="pn">(</span><span class="pn">)</span>
+</code></pre>
+<h3><a name="Subtask-2-2-3" class="anchor" href="#Subtask-2-2-3">Subtask 2.2.3</a></h3>
+<p>Erstelle ein <code>Auto</code> und binde en an einen Namen. Dann wende die oben definierte Funktion zum <code>Fahren</code> darauf an.</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs31', 85)" onmouseover="showTip(event, 'fs31', 85)" class="id">car3</span> <span class="o">=</span> <span class="k">new</span> <span onmouseout="hideTip(event, 'fs25', 86)" onmouseover="showTip(event, 'fs25', 86)" class="rt">Auto</span><span class="pn">(</span><span class="s">&quot;Toyota&quot;</span><span class="pn">,</span> <span class="n">3</span><span class="pn">)</span>
+
+<span onmouseout="hideTip(event, 'fs28', 87)" onmouseover="showTip(event, 'fs28', 87)" class="fn">fahren</span> <span onmouseout="hideTip(event, 'fs31', 88)" onmouseover="showTip(event, 'fs31', 88)" class="id">car3</span>
+</code></pre>
+<h3><a name="Task-2-3-Bonusaufgabe-Veränderliche-Werte-in-Objekten" class="anchor" href="#Task-2-3-Bonusaufgabe-Veränderliche-Werte-in-Objekten">Task 2.3 (Bonusaufgabe) Veränderliche Werte in Objekten</a></h3>
+<p>Deklariere eine Klasse <code>Cabrio</code> die vom Typ <code>Fahrzeug</code> erbt.</p>
+<p>Diese Klasse soll ein Feld <code>DachOffen</code> vom Typ <code>bool</code> haben und zusätzlich Methoden, mit denen man das Dach öffnen und schließen kann</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="c">// L&#246;sung &#252;ber Feld nur mit get (default), und Methoden die das Verhalten regeln (bevorzugt)</span>
+<span class="k">type</span> <span onmouseout="hideTip(event, 'fs32', 89)" onmouseover="showTip(event, 'fs32', 89)" class="rt">Cabrio</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs18', 90)" onmouseover="showTip(event, 'fs18', 90)" class="fn">hersteller</span><span class="pn">:</span><span onmouseout="hideTip(event, 'fs4', 91)" onmouseover="showTip(event, 'fs4', 91)" class="rt">string</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs33', 92)" onmouseover="showTip(event, 'fs33', 92)" class="fn">tueren</span><span class="pn">:</span><span onmouseout="hideTip(event, 'fs6', 93)" onmouseover="showTip(event, 'fs6', 93)" class="vt">int</span><span class="pn">)</span> <span class="o">=</span>
+
+    <span class="k">inherit</span> <span onmouseout="hideTip(event, 'fs25', 94)" onmouseover="showTip(event, 'fs25', 94)" class="rt">Auto</span><span class="pn">(</span><span class="fn">hersteller</span><span class="pn">,</span><span onmouseout="hideTip(event, 'fs33', 95)" onmouseover="showTip(event, 'fs33', 95)" class="fn">tueren</span><span class="pn">)</span>
+
+    <span class="k">let</span> <span class="k">mutable</span> <span onmouseout="hideTip(event, 'fs34', 96)" onmouseover="showTip(event, 'fs34', 96)" class="mv">dachOffen</span> <span class="o">=</span> <span class="k">false</span>
+
+    <span class="c">// Feld abrufbar aber nicht verw&#228;nderbar</span>
+    <span class="k">member</span> <span onmouseout="hideTip(event, 'fs35', 97)" onmouseover="showTip(event, 'fs35', 97)" class="fn">this</span><span class="pn">.</span><span class="prop">DachOffen</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs34', 98)" onmouseover="showTip(event, 'fs34', 98)" class="mv">dachOffen</span>
+
+    <span class="c">// Methoden, zur gezielten Zustands&#228;nderung</span>
+    <span class="k">member</span> <span onmouseout="hideTip(event, 'fs36', 99)" onmouseover="showTip(event, 'fs36', 99)" class="fn">self</span><span class="pn">.</span><span class="fn">Oeffnen</span><span class="pn">(</span><span class="pn">)</span> <span class="o">=</span> 
+        <span class="k">if</span> <span onmouseout="hideTip(event, 'fs34', 100)" onmouseover="showTip(event, 'fs34', 100)" class="mv">dachOffen</span> <span class="k">then</span> <span onmouseout="hideTip(event, 'fs20', 101)" onmouseover="showTip(event, 'fs20', 101)" class="fn">printfn</span> <span class="s">&quot;Das Dach ist bereits offen!&quot;</span>
+        <span class="k">else</span> <span onmouseout="hideTip(event, 'fs20', 102)" onmouseover="showTip(event, 'fs20', 102)" class="fn">printfn</span> <span class="s">&quot;Das Dach ist jetzt offen.&quot;</span>
+        <span onmouseout="hideTip(event, 'fs34', 103)" onmouseover="showTip(event, 'fs34', 103)" class="mv">dachOffen</span> <span class="k">&lt;-</span> <span class="k">true</span>
+
+    <span class="k">member</span> <span onmouseout="hideTip(event, 'fs36', 104)" onmouseover="showTip(event, 'fs36', 104)" class="fn">self</span><span class="pn">.</span><span class="fn">Schliessen</span><span class="pn">(</span><span class="pn">)</span> <span class="o">=</span> 
+        <span class="k">if</span> <span onmouseout="hideTip(event, 'fs34', 105)" onmouseover="showTip(event, 'fs34', 105)" class="mv">dachOffen</span> <span class="k">then</span> <span onmouseout="hideTip(event, 'fs20', 106)" onmouseover="showTip(event, 'fs20', 106)" class="fn">printfn</span> <span class="s">&quot;Das Dach ist jetzt zu!&quot;</span>
+        <span class="k">else</span> <span onmouseout="hideTip(event, 'fs20', 107)" onmouseover="showTip(event, 'fs20', 107)" class="fn">printfn</span> <span class="s">&quot;Das Dach ist schon zu!&quot;</span>
+        <span onmouseout="hideTip(event, 'fs34', 108)" onmouseover="showTip(event, 'fs34', 108)" class="mv">dachOffen</span> <span class="k">&lt;-</span> <span class="k">false</span>        
+
+    <span class="c">// Methoden, zum automatischen Zustandswechsel</span>
+    <span class="k">member</span> <span onmouseout="hideTip(event, 'fs35', 109)" onmouseover="showTip(event, 'fs35', 109)" class="fn">this</span><span class="pn">.</span><span class="fn">DachBetaetigen</span><span class="pn">(</span><span class="pn">)</span> <span class="o">=</span>
+        <span class="k">if</span> <span onmouseout="hideTip(event, 'fs34', 110)" onmouseover="showTip(event, 'fs34', 110)" class="mv">dachOffen</span> <span class="o">=</span> <span class="k">true</span> <span class="k">then</span> 
+            <span onmouseout="hideTip(event, 'fs34', 111)" onmouseover="showTip(event, 'fs34', 111)" class="mv">dachOffen</span> <span class="k">&lt;-</span> <span class="k">false</span>
+        <span class="k">else</span>
+            <span onmouseout="hideTip(event, 'fs34', 112)" onmouseover="showTip(event, 'fs34', 112)" class="mv">dachOffen</span> <span class="k">&lt;-</span> <span class="k">true</span>
+
+<span class="c">// Zus&#228;tzliche Hilfsfunktionen</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs37', 113)" onmouseover="showTip(event, 'fs37', 113)" class="fn">dachSchliessen</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs38', 114)" onmouseover="showTip(event, 'fs38', 114)" class="fn">c</span><span class="pn">:</span><span onmouseout="hideTip(event, 'fs32', 115)" onmouseover="showTip(event, 'fs32', 115)" class="rt">Cabrio</span><span class="pn">)</span> <span class="o">=</span> 
+    <span onmouseout="hideTip(event, 'fs38', 116)" onmouseover="showTip(event, 'fs38', 116)" class="fn">c</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs39', 117)" onmouseover="showTip(event, 'fs39', 117)" class="id">Schliessen</span><span class="pn">(</span><span class="pn">)</span>
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs40', 118)" onmouseover="showTip(event, 'fs40', 118)" class="fn">dachOeffnen</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs38', 119)" onmouseover="showTip(event, 'fs38', 119)" class="fn">c</span><span class="pn">:</span><span onmouseout="hideTip(event, 'fs32', 120)" onmouseover="showTip(event, 'fs32', 120)" class="rt">Cabrio</span><span class="pn">)</span> <span class="o">=</span> 
+    <span onmouseout="hideTip(event, 'fs38', 121)" onmouseover="showTip(event, 'fs38', 121)" class="fn">c</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs41', 122)" onmouseover="showTip(event, 'fs41', 122)" class="id">Oeffnen</span><span class="pn">(</span><span class="pn">)</span>
+
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs42', 123)" onmouseover="showTip(event, 'fs42', 123)" class="id">neuesCabrio</span> <span class="o">=</span> <span class="k">new</span> <span onmouseout="hideTip(event, 'fs32', 124)" onmouseover="showTip(event, 'fs32', 124)" class="rt">Cabrio</span><span class="pn">(</span><span class="s">&quot;Audi&quot;</span><span class="pn">,</span><span class="n">4</span><span class="pn">)</span>
+
+<span onmouseout="hideTip(event, 'fs40', 125)" onmouseover="showTip(event, 'fs40', 125)" class="fn">dachOeffnen</span> <span onmouseout="hideTip(event, 'fs42', 126)" onmouseover="showTip(event, 'fs42', 126)" class="id">neuesCabrio</span>
+
+
+
+<span class="c">// L&#246;sung &#252;ber Feld mit get/set, ohne Methoden</span>
+<span class="k">type</span> <span onmouseout="hideTip(event, 'fs43', 127)" onmouseover="showTip(event, 'fs43', 127)" class="rt">Cabrio2</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs18', 128)" onmouseover="showTip(event, 'fs18', 128)" class="fn">hersteller</span><span class="pn">:</span><span onmouseout="hideTip(event, 'fs4', 129)" onmouseover="showTip(event, 'fs4', 129)" class="rt">string</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs33', 130)" onmouseover="showTip(event, 'fs33', 130)" class="fn">tueren</span><span class="pn">:</span><span onmouseout="hideTip(event, 'fs6', 131)" onmouseover="showTip(event, 'fs6', 131)" class="vt">int</span><span class="pn">)</span> <span class="o">=</span>
+
+    <span class="k">inherit</span> <span onmouseout="hideTip(event, 'fs25', 132)" onmouseover="showTip(event, 'fs25', 132)" class="rt">Auto</span><span class="pn">(</span><span class="fn">hersteller</span><span class="pn">,</span><span onmouseout="hideTip(event, 'fs33', 133)" onmouseover="showTip(event, 'fs33', 133)" class="fn">tueren</span><span class="pn">)</span>
+
+    <span class="k">let</span> <span class="k">mutable</span> <span onmouseout="hideTip(event, 'fs34', 134)" onmouseover="showTip(event, 'fs34', 134)" class="mv">dachOffen</span> <span class="o">=</span> <span class="k">false</span>
+
+    <span class="c">// Feld abrufbar und verw&#228;nderbar</span>
+    <span class="k">member</span> <span onmouseout="hideTip(event, 'fs44', 135)" onmouseover="showTip(event, 'fs44', 135)" class="fn">this</span><span class="pn">.</span><span class="prop">DachOffen</span>
+        <span class="k">with</span> <span class="prop">get</span> <span class="pn">(</span><span class="pn">)</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs34', 136)" onmouseover="showTip(event, 'fs34', 136)" class="mv">dachOffen</span>
+        <span class="k">and</span> <span onmouseout="hideTip(event, 'fs45', 137)" onmouseover="showTip(event, 'fs45', 137)" class="prop">set</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs46', 138)" onmouseover="showTip(event, 'fs46', 138)" class="fn">v</span><span class="pn">)</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs34', 139)" onmouseover="showTip(event, 'fs34', 139)" class="mv">dachOffen</span> <span class="k">&lt;-</span> <span onmouseout="hideTip(event, 'fs46', 140)" onmouseover="showTip(event, 'fs46', 140)" class="fn">v</span>
+
+<span class="c">// In diesem Fall m&#252;ssten die Funktionen die Logik selbst tragen</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs47', 141)" onmouseover="showTip(event, 'fs47', 141)" class="fn">dachOeffnen2</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs48', 142)" onmouseover="showTip(event, 'fs48', 142)" class="fn">c</span><span class="pn">:</span><span onmouseout="hideTip(event, 'fs43', 143)" onmouseover="showTip(event, 'fs43', 143)" class="rt">Cabrio2</span><span class="pn">)</span> <span class="o">=</span> 
+    <span class="k">if</span> <span onmouseout="hideTip(event, 'fs48', 144)" onmouseover="showTip(event, 'fs48', 144)" class="fn">c</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs49', 145)" onmouseover="showTip(event, 'fs49', 145)" class="id">DachOffen</span> <span class="k">then</span> <span onmouseout="hideTip(event, 'fs20', 146)" onmouseover="showTip(event, 'fs20', 146)" class="fn">printfn</span> <span class="s">&quot;Das Dach ist bereits offen!&quot;</span>
+    <span class="k">else</span> <span onmouseout="hideTip(event, 'fs20', 147)" onmouseover="showTip(event, 'fs20', 147)" class="fn">printfn</span> <span class="s">&quot;Das Dach ist jetzt offen.&quot;</span>
+    <span onmouseout="hideTip(event, 'fs48', 148)" onmouseover="showTip(event, 'fs48', 148)" class="fn">c</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs49', 149)" onmouseover="showTip(event, 'fs49', 149)" class="id">DachOffen</span> <span class="k">&lt;-</span> <span class="k">true</span>
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs50', 150)" onmouseover="showTip(event, 'fs50', 150)" class="fn">dachSchliessen2</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs48', 151)" onmouseover="showTip(event, 'fs48', 151)" class="fn">c</span><span class="pn">:</span><span onmouseout="hideTip(event, 'fs43', 152)" onmouseover="showTip(event, 'fs43', 152)" class="rt">Cabrio2</span><span class="pn">)</span> <span class="o">=</span> 
+    <span class="k">if</span> <span onmouseout="hideTip(event, 'fs48', 153)" onmouseover="showTip(event, 'fs48', 153)" class="fn">c</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs49', 154)" onmouseover="showTip(event, 'fs49', 154)" class="id">DachOffen</span> <span class="k">then</span> <span onmouseout="hideTip(event, 'fs20', 155)" onmouseover="showTip(event, 'fs20', 155)" class="fn">printfn</span> <span class="s">&quot;Das Dach ist jetzt zu!&quot;</span>
+    <span class="k">else</span> <span onmouseout="hideTip(event, 'fs20', 156)" onmouseover="showTip(event, 'fs20', 156)" class="fn">printfn</span> <span class="s">&quot;Das Dach ist schon zu!&quot;</span>
+    <span onmouseout="hideTip(event, 'fs48', 157)" onmouseover="showTip(event, 'fs48', 157)" class="fn">c</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs49', 158)" onmouseover="showTip(event, 'fs49', 158)" class="id">DachOffen</span> <span class="k">&lt;-</span> <span class="k">false</span>       
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs51', 159)" onmouseover="showTip(event, 'fs51', 159)" class="id">neuesCabrio2</span> <span class="o">=</span> <span class="k">new</span> <span onmouseout="hideTip(event, 'fs43', 160)" onmouseover="showTip(event, 'fs43', 160)" class="rt">Cabrio2</span><span class="pn">(</span><span class="s">&quot;Audi&quot;</span><span class="pn">,</span><span class="n">4</span><span class="pn">)</span>
+
+<span onmouseout="hideTip(event, 'fs47', 161)" onmouseover="showTip(event, 'fs47', 161)" class="fn">dachOeffnen2</span> <span onmouseout="hideTip(event, 'fs51', 162)" onmouseover="showTip(event, 'fs51', 162)" class="id">neuesCabrio2</span> 
+</code></pre>
+<h2><a name="Polymorphismus" class="anchor" href="#Polymorphismus">Polymorphismus</a></h2>
+<h3><a name="Task-3-1" class="anchor" href="#Task-3-1">Task 3.1</a></h3>
+<p>Wir wollen hier Personen implementieren, die ihren Namen sagen können. In Japan wird auch im alltäglichen Leben normalerweise der Familienname vor dem Eigennamen genannt.
+So ist Yoko Ono in Japan als Ono Yoko bekannt. Um diesen Unterschied programmatisch darzustellen, wurde der Code folgendermassen geschrieben:</p>
+<p>Ordne die folgenden Begriffen den zugehörigen Codebausteinen zu: <code>Klassendeklaration</code>, <code>Objektinstanziierung</code>, <code>Interfacedeklaration</code></p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="c">// Bezeichnung: Interfacedeklaration</span>
+<span class="k">type</span> <span onmouseout="hideTip(event, 'fs52', 163)" onmouseover="showTip(event, 'fs52', 163)" class="if">IPerson</span> <span class="o">=</span>
+    <span class="k">abstract</span> <span class="prop">FamilienName</span>   <span class="pn">:</span> <span onmouseout="hideTip(event, 'fs4', 164)" onmouseover="showTip(event, 'fs4', 164)" class="rt">string</span>
+    <span class="k">abstract</span> <span class="prop">EigenName</span>      <span class="pn">:</span> <span onmouseout="hideTip(event, 'fs4', 165)" onmouseover="showTip(event, 'fs4', 165)" class="rt">string</span>
+    <span class="k">abstract</span> <span class="fn">NamenSagen</span>     <span class="pn">:</span> <span onmouseout="hideTip(event, 'fs53', 166)" onmouseover="showTip(event, 'fs53', 166)" class="rt">unit</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs4', 167)" onmouseover="showTip(event, 'fs4', 167)" class="rt">string</span>
+
+<span class="c">// Bezeichnung: Klassendeklaration</span>
+<span class="k">type</span> <span onmouseout="hideTip(event, 'fs54', 168)" onmouseover="showTip(event, 'fs54', 168)" class="rt">Japaner</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs55', 169)" onmouseover="showTip(event, 'fs55', 169)" class="fn">fn</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs56', 170)" onmouseover="showTip(event, 'fs56', 170)" class="fn">en</span><span class="pn">)</span> <span class="o">=</span>
+    <span class="k">let</span> <span onmouseout="hideTip(event, 'fs57', 171)" onmouseover="showTip(event, 'fs57', 171)" class="fn">familienName</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs55', 172)" onmouseover="showTip(event, 'fs55', 172)" class="fn">fn</span>
+    <span class="k">let</span> <span onmouseout="hideTip(event, 'fs58', 173)" onmouseover="showTip(event, 'fs58', 173)" class="fn">eigenName</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs56', 174)" onmouseover="showTip(event, 'fs56', 174)" class="fn">en</span>
+    <span class="k">interface</span> <span onmouseout="hideTip(event, 'fs52', 175)" onmouseover="showTip(event, 'fs52', 175)" class="if">IPerson</span> <span class="k">with</span>
+        <span class="k">member</span> <span onmouseout="hideTip(event, 'fs59', 176)" onmouseover="showTip(event, 'fs59', 176)" class="fn">self</span><span class="pn">.</span><span class="prop">FamilienName</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs57', 177)" onmouseover="showTip(event, 'fs57', 177)" class="fn">familienName</span>
+        <span class="k">member</span> <span onmouseout="hideTip(event, 'fs59', 178)" onmouseover="showTip(event, 'fs59', 178)" class="fn">self</span><span class="pn">.</span><span class="prop">EigenName</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs58', 179)" onmouseover="showTip(event, 'fs58', 179)" class="fn">eigenName</span>
+        <span class="k">member</span> <span onmouseout="hideTip(event, 'fs59', 180)" onmouseover="showTip(event, 'fs59', 180)" class="fn">self</span><span class="pn">.</span><span class="fn">NamenSagen</span> <span class="pn">(</span><span class="pn">)</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs57', 181)" onmouseover="showTip(event, 'fs57', 181)" class="fn">familienName</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span onmouseout="hideTip(event, 'fs58', 182)" onmouseover="showTip(event, 'fs58', 182)" class="fn">eigenName</span>
+
+<span class="c">// Bezeichnung: Klassendeklaration</span>
+<span class="k">type</span> <span onmouseout="hideTip(event, 'fs60', 183)" onmouseover="showTip(event, 'fs60', 183)" class="rt">Deutscher</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs55', 184)" onmouseover="showTip(event, 'fs55', 184)" class="fn">fn</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs56', 185)" onmouseover="showTip(event, 'fs56', 185)" class="fn">en</span><span class="pn">)</span> <span class="o">=</span>
+    <span class="k">let</span> <span onmouseout="hideTip(event, 'fs57', 186)" onmouseover="showTip(event, 'fs57', 186)" class="fn">familienName</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs55', 187)" onmouseover="showTip(event, 'fs55', 187)" class="fn">fn</span>
+    <span class="k">let</span> <span onmouseout="hideTip(event, 'fs58', 188)" onmouseover="showTip(event, 'fs58', 188)" class="fn">eigenName</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs56', 189)" onmouseover="showTip(event, 'fs56', 189)" class="fn">en</span>
+    <span class="k">interface</span> <span onmouseout="hideTip(event, 'fs52', 190)" onmouseover="showTip(event, 'fs52', 190)" class="if">IPerson</span> <span class="k">with</span>
+        <span class="k">member</span> <span onmouseout="hideTip(event, 'fs61', 191)" onmouseover="showTip(event, 'fs61', 191)" class="fn">self</span><span class="pn">.</span><span class="prop">FamilienName</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs57', 192)" onmouseover="showTip(event, 'fs57', 192)" class="fn">familienName</span>
+        <span class="k">member</span> <span onmouseout="hideTip(event, 'fs61', 193)" onmouseover="showTip(event, 'fs61', 193)" class="fn">self</span><span class="pn">.</span><span class="prop">EigenName</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs58', 194)" onmouseover="showTip(event, 'fs58', 194)" class="fn">eigenName</span>
+        <span class="k">member</span> <span onmouseout="hideTip(event, 'fs61', 195)" onmouseover="showTip(event, 'fs61', 195)" class="fn">self</span><span class="pn">.</span><span class="fn">NamenSagen</span> <span class="pn">(</span><span class="pn">)</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs58', 196)" onmouseover="showTip(event, 'fs58', 196)" class="fn">eigenName</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span onmouseout="hideTip(event, 'fs57', 197)" onmouseover="showTip(event, 'fs57', 197)" class="fn">familienName</span>
+
+<span class="c">// Bezeichnung: Objektinstanziierung</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs62', 198)" onmouseover="showTip(event, 'fs62', 198)" class="id">yokoOno</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs54', 199)" onmouseover="showTip(event, 'fs54', 199)" class="fn">Japaner</span><span class="pn">(</span><span class="s">&quot;Ono&quot;</span><span class="pn">,</span><span class="s">&quot;Yoko&quot;</span><span class="pn">)</span>
+
+<span class="c">// Bezeichnung: Objektinstanziierung</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs63', 200)" onmouseover="showTip(event, 'fs63', 200)" class="id">angeloMerte</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs60', 201)" onmouseover="showTip(event, 'fs60', 201)" class="fn">Deutscher</span><span class="pn">(</span><span class="s">&quot;Merte&quot;</span><span class="pn">,</span><span class="s">&quot;Angelo&quot;</span><span class="pn">)</span>
+</code></pre>
+<h3><a name="Task-3-2" class="anchor" href="#Task-3-2">Task 3.2</a></h3>
+<p>Greife auf die Methode <code>NamenSagen</code> der beiden Personen zu.
+Tipp: Verwende den korrekten <code>casting Operator</code></p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="c">// Variante1</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs64', 202)" onmouseover="showTip(event, 'fs64', 202)" class="id">say</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs62', 203)" onmouseover="showTip(event, 'fs62', 203)" class="id">yokoOno</span> <span class="o">:&gt;</span> <span onmouseout="hideTip(event, 'fs52', 204)" onmouseover="showTip(event, 'fs52', 204)" class="if">IPerson</span>
+<span onmouseout="hideTip(event, 'fs64', 205)" onmouseover="showTip(event, 'fs64', 205)" class="id">say</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs65', 206)" onmouseover="showTip(event, 'fs65', 206)" class="id">NamenSagen</span><span class="pn">(</span><span class="pn">)</span>
+
+<span class="c">// Variante2</span>
+<span class="fn">(</span><span onmouseout="hideTip(event, 'fs63', 207)" onmouseover="showTip(event, 'fs63', 207)" class="id">angeloMerte</span> <span class="o">:&gt;</span> <span onmouseout="hideTip(event, 'fs52', 208)" onmouseover="showTip(event, 'fs52', 208)" class="if">IPerson</span><span class="pn">)</span><span class="pn">.</span><span class="id">NamenSagen</span><span class="pn">(</span><span class="pn">)</span>
+
+<span class="c">// Variante3</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs66', 209)" onmouseover="showTip(event, 'fs66', 209)" class="fn">namenSagen</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs67', 210)" onmouseover="showTip(event, 'fs67', 210)" class="fn">p</span> <span class="pn">:</span> <span class="pn">#</span><span onmouseout="hideTip(event, 'fs52', 211)" onmouseover="showTip(event, 'fs52', 211)" class="if">IPerson</span><span class="pn">)</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs67', 212)" onmouseover="showTip(event, 'fs67', 212)" class="fn">p</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs65', 213)" onmouseover="showTip(event, 'fs65', 213)" class="id">NamenSagen</span><span class="pn">(</span><span class="pn">)</span>
+
+<span onmouseout="hideTip(event, 'fs66', 214)" onmouseover="showTip(event, 'fs66', 214)" class="fn">namenSagen</span> <span onmouseout="hideTip(event, 'fs62', 215)" onmouseover="showTip(event, 'fs62', 215)" class="id">yokoOno</span>
+</code></pre>
+<h3><a name="Task-3-3" class="anchor" href="#Task-3-3">Task 3.3</a></h3>
+<p>Erkläre kurz in eigenen Worten, warum in diesem Beispiel Polymorphismus verwendet wurde und nicht Vererbung.</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="c">// In diesem Fall sollen alle Personen die gleiche Methode `NamenSagen` besitzen. Was genau in der Methode passiert soll aber je nach Nationalit&#228;t unterschiedlich sein.</span>
+<span class="c">// Bei Vererbung w&#252;rde das Verhalten der Methode einmal definiert werden und alle erbenden Personen w&#252;rde den Namen auf die gleich Weise sagen.</span>
+<span class="c">// Polymorphismus erlaubt es, dass das konkrete Verhalten sich f&#252;r die gleich benutzbare Methode zwischen den Leuten unterscheidet.</span>
+</code></pre>
+<h3><a name="Task-3-4" class="anchor" href="#Task-3-4">Task 3.4</a></h3>
+<p>Im fernen Land Dingeldongel wird wie auch in Deutschland erst der Eigenname und dann der Familienname genannt. Beide werden jedoch revertiert. (Angela Merkel -&gt; alegnA lekreM)</p>
+<p>Deklariere die Klasse <code>Dingeldongler</code>, die das Interface <code>IPerson</code> implementiert.</p>
+<p>Tipp: Verwende die gegebene string-revertier Funktion</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs68', 216)" onmouseover="showTip(event, 'fs68', 216)" class="fn">revert</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs69', 217)" onmouseover="showTip(event, 'fs69', 217)" class="fn">s</span><span class="pn">:</span><span onmouseout="hideTip(event, 'fs4', 218)" onmouseover="showTip(event, 'fs4', 218)" class="rt">string</span><span class="pn">)</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs70', 219)" onmouseover="showTip(event, 'fs70', 219)" class="id">System</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs71', 220)" onmouseover="showTip(event, 'fs71', 220)" class="id">String</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs69', 221)" onmouseover="showTip(event, 'fs69', 221)" class="fn">s</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs72', 222)" onmouseover="showTip(event, 'fs72', 222)" class="id">ToCharArray</span><span class="pn">(</span><span class="pn">)</span> <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs73', 223)" onmouseover="showTip(event, 'fs73', 223)" class="m">Array</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs74', 224)" onmouseover="showTip(event, 'fs74', 224)" class="id">rev</span><span class="pn">)</span>
+
+<span class="k">type</span> <span onmouseout="hideTip(event, 'fs75', 225)" onmouseover="showTip(event, 'fs75', 225)" class="rt">Dingeldongler</span> <span class="pn">(</span><span onmouseout="hideTip(event, 'fs55', 226)" onmouseover="showTip(event, 'fs55', 226)" class="fn">fn</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs56', 227)" onmouseover="showTip(event, 'fs56', 227)" class="fn">en</span><span class="pn">)</span> <span class="o">=</span>
+    <span class="k">let</span> <span onmouseout="hideTip(event, 'fs57', 228)" onmouseover="showTip(event, 'fs57', 228)" class="fn">familienName</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs55', 229)" onmouseover="showTip(event, 'fs55', 229)" class="fn">fn</span>
+    <span class="k">let</span> <span onmouseout="hideTip(event, 'fs58', 230)" onmouseover="showTip(event, 'fs58', 230)" class="fn">eigenName</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs56', 231)" onmouseover="showTip(event, 'fs56', 231)" class="fn">en</span> 
+    <span class="k">interface</span> <span onmouseout="hideTip(event, 'fs52', 232)" onmouseover="showTip(event, 'fs52', 232)" class="if">IPerson</span> <span class="k">with</span>
+        <span class="k">member</span> <span onmouseout="hideTip(event, 'fs76', 233)" onmouseover="showTip(event, 'fs76', 233)" class="fn">self</span><span class="pn">.</span><span class="prop">FamilienName</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs57', 234)" onmouseover="showTip(event, 'fs57', 234)" class="fn">familienName</span>
+        <span class="k">member</span> <span onmouseout="hideTip(event, 'fs76', 235)" onmouseover="showTip(event, 'fs76', 235)" class="fn">self</span><span class="pn">.</span><span class="prop">EigenName</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs58', 236)" onmouseover="showTip(event, 'fs58', 236)" class="fn">eigenName</span>
+        <span class="k">member</span> <span onmouseout="hideTip(event, 'fs76', 237)" onmouseover="showTip(event, 'fs76', 237)" class="fn">self</span><span class="pn">.</span><span class="fn">NamenSagen</span> <span class="pn">(</span><span class="pn">)</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs68', 238)" onmouseover="showTip(event, 'fs68', 238)" class="fn">revert</span> <span onmouseout="hideTip(event, 'fs58', 239)" onmouseover="showTip(event, 'fs58', 239)" class="fn">eigenName</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span onmouseout="hideTip(event, 'fs68', 240)" onmouseover="showTip(event, 'fs68', 240)" class="fn">revert</span> <span onmouseout="hideTip(event, 'fs57', 241)" onmouseover="showTip(event, 'fs57', 241)" class="fn">familienName</span>
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs77', 242)" onmouseover="showTip(event, 'fs77', 242)" class="id">amblimKamblim</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs75', 243)" onmouseover="showTip(event, 'fs75', 243)" class="fn">Dingeldongler</span><span class="pn">(</span><span class="s">&quot;Kamblim&quot;</span><span class="pn">,</span> <span class="s">&quot;Amblim&quot;</span><span class="pn">)</span>
+<span class="fn">(</span><span onmouseout="hideTip(event, 'fs77', 244)" onmouseover="showTip(event, 'fs77', 244)" class="id">amblimKamblim</span> <span class="o">:&gt;</span> <span onmouseout="hideTip(event, 'fs52', 245)" onmouseover="showTip(event, 'fs52', 245)" class="if">IPerson</span><span class="pn">)</span><span class="pn">.</span><span class="id">NamenSagen</span><span class="pn">(</span><span class="pn">)</span>
+</code></pre>
+
+                </div>
+            </div>
+        </div>
+        <div class="fsdocs-tip" id="fs1">val mutable x : int</div>
+<div class="fsdocs-tip" id="fs2">type Mensch =<br />&#160;&#160;{ Name: string<br />&#160;&#160;&#160;&#160;mutable Alter: int }</div>
+<div class="fsdocs-tip" id="fs3">Mensch.Name: string</div>
+<div class="fsdocs-tip" id="fs4">Multiple items<br />val string : value:&#39;T -&gt; string<br /><br />--------------------<br />type string = System.String</div>
+<div class="fsdocs-tip" id="fs5">Mensch.Alter: int</div>
+<div class="fsdocs-tip" id="fs6">Multiple items<br />val int : value:&#39;T -&gt; int (requires member op_Explicit)<br /><br />--------------------<br />[&lt;Struct&gt;]<br />type int = int32<br /><br />--------------------<br />type int&lt;&#39;Measure&gt; =<br />&#160;&#160;int</div>
+<div class="fsdocs-tip" id="fs7">val geburtstagFeiern : m:Mensch -&gt; unit</div>
+<div class="fsdocs-tip" id="fs8">val m : Mensch</div>
+<div class="fsdocs-tip" id="fs9">val mensch1 : Mensch</div>
+<div class="fsdocs-tip" id="fs10">val arrayMax : array:int [] -&gt; int</div>
+<div class="fsdocs-tip" id="fs11">Multiple items<br />val array : int []<br /><br />--------------------<br />type &#39;T array = &#39;T []</div>
+<div class="fsdocs-tip" id="fs12">val mutable maxValue : int</div>
+<div class="fsdocs-tip" id="fs13">val i : int</div>
+<div class="fsdocs-tip" id="fs14">val arrayMax2 : array:int [] -&gt; int</div>
+<div class="fsdocs-tip" id="fs15">property System.Array.Length: int with get</div>
+<div class="fsdocs-tip" id="fs16">val array1 : int []</div>
+<div class="fsdocs-tip" id="fs17">Multiple items<br />type Fahrzeug =<br />&#160;&#160;new : unit -&gt; Fahrzeug + 1 overload<br />&#160;&#160;member Fahren : unit -&gt; unit<br />&#160;&#160;member Hersteller : string<br /><br />--------------------<br />new : unit -&gt; Fahrzeug<br />new : hersteller:string -&gt; Fahrzeug</div>
+<div class="fsdocs-tip" id="fs18">val hersteller : string</div>
+<div class="fsdocs-tip" id="fs19">val self : Fahrzeug</div>
+<div class="fsdocs-tip" id="fs20">val printfn : format:Printf.TextWriterFormat&lt;&#39;T&gt; -&gt; &#39;T</div>
+<div class="fsdocs-tip" id="fs21">property Fahrzeug.Hersteller: string with get</div>
+<div class="fsdocs-tip" id="fs22">val car1 : Fahrzeug</div>
+<div class="fsdocs-tip" id="fs23">val car2 : Fahrzeug</div>
+<div class="fsdocs-tip" id="fs24">Multiple items<br />type Motorrad =<br />&#160;&#160;inherit Fahrzeug<br />&#160;&#160;new : unit -&gt; Motorrad + 1 overload<br /><br />--------------------<br />new : unit -&gt; Motorrad<br />new : hersteller:string -&gt; Motorrad</div>
+<div class="fsdocs-tip" id="fs25">Multiple items<br />type Auto =<br />&#160;&#160;inherit Fahrzeug<br />&#160;&#160;new : unit -&gt; Auto + 1 overload<br />&#160;&#160;member AnzahlTueren : int<br /><br />--------------------<br />new : unit -&gt; Auto<br />new : hersteller:string * anzahlTueren:int -&gt; Auto</div>
+<div class="fsdocs-tip" id="fs26">val anzahlTueren : int</div>
+<div class="fsdocs-tip" id="fs27">val self : Auto</div>
+<div class="fsdocs-tip" id="fs28">val fahren : fahrzeug:#Fahrzeug -&gt; unit</div>
+<div class="fsdocs-tip" id="fs29">val fahrzeug : #Fahrzeug</div>
+<div class="fsdocs-tip" id="fs30">member Fahrzeug.Fahren : unit -&gt; unit</div>
+<div class="fsdocs-tip" id="fs31">val car3 : Auto</div>
+<div class="fsdocs-tip" id="fs32">Multiple items<br />type Cabrio =<br />&#160;&#160;inherit Auto<br />&#160;&#160;new : hersteller:string * tueren:int -&gt; Cabrio<br />&#160;&#160;member DachBetaetigen : unit -&gt; unit<br />&#160;&#160;member Oeffnen : unit -&gt; unit<br />&#160;&#160;member Schliessen : unit -&gt; unit<br />&#160;&#160;member DachOffen : bool<br /><br />--------------------<br />new : hersteller:string * tueren:int -&gt; Cabrio</div>
+<div class="fsdocs-tip" id="fs33">val tueren : int</div>
+<div class="fsdocs-tip" id="fs34">val mutable dachOffen : bool</div>
+<div class="fsdocs-tip" id="fs35">val this : Cabrio</div>
+<div class="fsdocs-tip" id="fs36">val self : Cabrio</div>
+<div class="fsdocs-tip" id="fs37">val dachSchliessen : c:Cabrio -&gt; unit</div>
+<div class="fsdocs-tip" id="fs38">val c : Cabrio</div>
+<div class="fsdocs-tip" id="fs39">member Cabrio.Schliessen : unit -&gt; unit</div>
+<div class="fsdocs-tip" id="fs40">val dachOeffnen : c:Cabrio -&gt; unit</div>
+<div class="fsdocs-tip" id="fs41">member Cabrio.Oeffnen : unit -&gt; unit</div>
+<div class="fsdocs-tip" id="fs42">val neuesCabrio : Cabrio</div>
+<div class="fsdocs-tip" id="fs43">Multiple items<br />type Cabrio2 =<br />&#160;&#160;inherit Auto<br />&#160;&#160;new : hersteller:string * tueren:int -&gt; Cabrio2<br />&#160;&#160;member DachOffen : bool<br /><br />--------------------<br />new : hersteller:string * tueren:int -&gt; Cabrio2</div>
+<div class="fsdocs-tip" id="fs44">val this : Cabrio2</div>
+<div class="fsdocs-tip" id="fs45">val set : elements:seq&lt;&#39;T&gt; -&gt; Set&lt;&#39;T&gt; (requires comparison)</div>
+<div class="fsdocs-tip" id="fs46">val v : bool</div>
+<div class="fsdocs-tip" id="fs47">val dachOeffnen2 : c:Cabrio2 -&gt; unit</div>
+<div class="fsdocs-tip" id="fs48">val c : Cabrio2</div>
+<div class="fsdocs-tip" id="fs49">property Cabrio2.DachOffen: bool with get, set</div>
+<div class="fsdocs-tip" id="fs50">val dachSchliessen2 : c:Cabrio2 -&gt; unit</div>
+<div class="fsdocs-tip" id="fs51">val neuesCabrio2 : Cabrio2</div>
+<div class="fsdocs-tip" id="fs52">type IPerson =<br />&#160;&#160;abstract member NamenSagen : unit -&gt; string<br />&#160;&#160;abstract member EigenName : string<br />&#160;&#160;abstract member FamilienName : string</div>
+<div class="fsdocs-tip" id="fs53">type unit = Unit</div>
+<div class="fsdocs-tip" id="fs54">Multiple items<br />type Japaner =<br />&#160;&#160;interface IPerson<br />&#160;&#160;new : fn:string * en:string -&gt; Japaner<br /><br />--------------------<br />new : fn:string * en:string -&gt; Japaner</div>
+<div class="fsdocs-tip" id="fs55">val fn : string</div>
+<div class="fsdocs-tip" id="fs56">val en : string</div>
+<div class="fsdocs-tip" id="fs57">val familienName : string</div>
+<div class="fsdocs-tip" id="fs58">val eigenName : string</div>
+<div class="fsdocs-tip" id="fs59">val self : Japaner</div>
+<div class="fsdocs-tip" id="fs60">Multiple items<br />type Deutscher =<br />&#160;&#160;interface IPerson<br />&#160;&#160;new : fn:string * en:string -&gt; Deutscher<br /><br />--------------------<br />new : fn:string * en:string -&gt; Deutscher</div>
+<div class="fsdocs-tip" id="fs61">val self : Deutscher</div>
+<div class="fsdocs-tip" id="fs62">val yokoOno : Japaner</div>
+<div class="fsdocs-tip" id="fs63">val angeloMerte : Deutscher</div>
+<div class="fsdocs-tip" id="fs64">val say : IPerson</div>
+<div class="fsdocs-tip" id="fs65">abstract member IPerson.NamenSagen : unit -&gt; string</div>
+<div class="fsdocs-tip" id="fs66">val namenSagen : p:#IPerson -&gt; string</div>
+<div class="fsdocs-tip" id="fs67">val p : #IPerson</div>
+<div class="fsdocs-tip" id="fs68">val revert : s:string -&gt; System.String</div>
+<div class="fsdocs-tip" id="fs69">val s : string</div>
+<div class="fsdocs-tip" id="fs70">namespace System</div>
+<div class="fsdocs-tip" id="fs71">Multiple items<br />type String =<br />&#160;&#160;interface IEnumerable&lt;char&gt;<br />&#160;&#160;interface IEnumerable<br />&#160;&#160;interface ICloneable<br />&#160;&#160;interface IComparable<br />&#160;&#160;interface IComparable&lt;string&gt;<br />&#160;&#160;interface IConvertible<br />&#160;&#160;interface IEquatable&lt;string&gt;<br />&#160;&#160;new : value: nativeptr&lt;char&gt; -&gt; unit + 8 overloads<br />&#160;&#160;member Clone : unit -&gt; obj<br />&#160;&#160;member CompareTo : value: obj -&gt; int + 1 overload<br />&#160;&#160;...<br /><br />--------------------<br />System.String(value: nativeptr&lt;char&gt;) : System.String<br />System.String(value: char []) : System.String<br />System.String(value: System.ReadOnlySpan&lt;char&gt;) : System.String<br />System.String(value: nativeptr&lt;sbyte&gt;) : System.String<br />System.String(c: char, count: int) : System.String<br />System.String(value: nativeptr&lt;char&gt;, startIndex: int, length: int) : System.String<br />System.String(value: char [], startIndex: int, length: int) : System.String<br />System.String(value: nativeptr&lt;sbyte&gt;, startIndex: int, length: int) : System.String<br />System.String(value: nativeptr&lt;sbyte&gt;, startIndex: int, length: int, enc: System.Text.Encoding) : System.String</div>
+<div class="fsdocs-tip" id="fs72">System.String.ToCharArray() : char []<br />System.String.ToCharArray(startIndex: int, length: int) : char []</div>
+<div class="fsdocs-tip" id="fs73">module Array<br /><br />from Microsoft.FSharp.Collections</div>
+<div class="fsdocs-tip" id="fs74">val rev : array:&#39;T [] -&gt; &#39;T []</div>
+<div class="fsdocs-tip" id="fs75">Multiple items<br />type Dingeldongler =<br />&#160;&#160;interface IPerson<br />&#160;&#160;new : fn:string * en:string -&gt; Dingeldongler<br /><br />--------------------<br />new : fn:string * en:string -&gt; Dingeldongler</div>
+<div class="fsdocs-tip" id="fs76">val self : Dingeldongler</div>
+<div class="fsdocs-tip" id="fs77">val amblimKamblim : Dingeldongler</div>
+
+    </div>
+
+    <!-- BEGIN SEARCH BOX: this adds support for the search box -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.css" />
+    <script type="text/javascript">var fsdocs_search_baseurl = '/BIO-BTE-12-V-4-SOLUTIONS/'</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.8/lunr.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.min.js"></script>
+    <script type="text/javascript" src="/BIO-BTE-12-V-4-SOLUTIONS/content/fsdocs-search.js"></script>
+    <!-- END SEARCH BOX: this adds support for the search box -->
+</body>
+<footer>
+    <script>
+        bulmaCollapsible.attach('.is-collapsible');
+    </script>
+</footer>
+</html>
