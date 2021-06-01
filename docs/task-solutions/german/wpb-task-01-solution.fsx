@@ -1,7 +1,7 @@
 (**
 ---
 title: 01 Hello F#
-category: Musterlösungen(deutsch)
+category: MusterlÃ¶sungen(deutsch)
 categoryindex: 1
 index: 1
 ---
@@ -22,8 +22,8 @@ Erst einmal die absoluten Basics:
     (Bei einzeiligem Code koennt ihr auch einfach die Zeile auswaehlen und Alt+Enter druecken ohne das alles markiert ist.)
 - **In einem Notebook:**
     Links von dem Feld unten das die '10' beinhaltet befindet sich ein 'play' Knopf. 
-    Dieser Knopf führt beim drücken den jeweiligen Code-block aus und gibt das Ergebnis (hier: 10) darunter aus.
-    **Codeblöcke in notebooks müssen immer mit dem Wert enden, der ausgegben werden soll.**
+    Dieser Knopf fÃ¼hrt beim drÃ¼cken den jeweiligen Code-block aus und gibt das Ergebnis (hier: 10) darunter aus.
+    **CodeblÃ¶cke in notebooks mÃ¼ssen immer mit dem Wert enden, der ausgegben werden soll.**
 *)
 
 10
@@ -87,7 +87,7 @@ let summeXY =
     let summeY = y + 20
     summeX + summeY
 
-// oder kürzer und ohne zwischenErgebnis:
+// oder kÃ¼rzer und ohne zwischenErgebnis:
 let summeXY' = x + 10 + y + 20
 
 (**
@@ -171,11 +171,11 @@ das korrekte Volumen des Zylinders ist. (Der Output einer printfn Funktion ist U
 Warum kann es Sinn machen, Ergebnisse zu printen? 
 *)
 
-// Mögliche Antwort: die print Funktion erlaubt es Zwischenergebnisse zu visualisieren.
+// MÃ¶gliche Antwort: die print Funktion erlaubt es Zwischenergebnisse zu visualisieren.
 let calculateCylinderVolume radius laenge =
     let volumen = System.Math.PI * radius * radius * laenge
     printfn "Das Volumen des Zylinders ist: %f" volumen
-    // Der Rückgabewert ist gleich dem Wert der an Volumen gebunden wurde
+    // Der RÃ¼ckgabewert ist gleich dem Wert der an Volumen gebunden wurde
     volumen
 
 (**
