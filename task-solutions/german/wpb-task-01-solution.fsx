@@ -1,5 +1,5 @@
 (**
-// can't yet format YamlFrontmatter (["title: 01 Hello F#"; "category: Musterl�sungen(deutsch)"; "categoryindex: 1"; "index: 1"], Some { StartLine = 2 StartColumn = 0 EndLine = 6 EndColumn = 8 }) to pynb markdown
+// can't yet format YamlFrontmatter (["title: 01 Hello F#"; "category: Musterlösungen(deutsch)"; "categoryindex: 1"; "index: 1"], Some { StartLine = 2 StartColumn = 0 EndLine = 6 EndColumn = 8 }) to pynb markdown
 
 [![Binder](/BIO-BTE-12-V-4-SOLUTIONS/img/badge-binder.svg)](https://mybinder.org/v2/gh/csbiology/BIO-BTE-12-V-4/gh-pages?filepath=task-solutions/german/wpb-task-01-solution.ipynb)&emsp;
 [![Script](/BIO-BTE-12-V-4-SOLUTIONS/img/badge-script.svg)](/BIO-BTE-12-V-4-SOLUTIONS/task-solutions/german/wpb-task-01-solution.fsx)&emsp;
@@ -15,8 +15,8 @@ Erst einmal die absoluten Basics:
     (Bei einzeiligem Code koennt ihr auch einfach die Zeile auswaehlen und Alt+Enter druecken ohne das alles markiert ist.)
 - **In einem Notebook:**
     Links von dem Feld unten das die '10' beinhaltet befindet sich ein 'play' Knopf. 
-    Dieser Knopf f�hrt beim dr�cken den jeweiligen Code-block aus und gibt das Ergebnis (hier: 10) darunter aus.
-    **Codebl�cke in notebooks m�ssen immer mit dem Wert enden, der ausgegben werden soll.**
+    Dieser Knopf führt beim drücken den jeweiligen Code-block aus und gibt das Ergebnis (hier: 10) darunter aus.
+    **Codeblöcke in notebooks müssen immer mit dem Wert enden, der ausgegben werden soll.**
 
 *)
 10
@@ -73,7 +73,7 @@ let summeXY =
     let summeY = y + 20
     summeX + summeY
 
-// oder k�rzer und ohne zwischenErgebnis:
+// oder kürzer und ohne zwischenErgebnis:
 let summeXY' = x + 10 + y + 20
 (**
 ## Die "printfn" - Funktion
@@ -147,11 +147,11 @@ das korrekte Volumen des Zylinders ist. (Der Output einer printfn Funktion ist U
 Warum kann es Sinn machen, Ergebnisse zu printen? 
 
 *)
-// M�gliche Antwort: die print Funktion erlaubt es Zwischenergebnisse zu visualisieren.
+// Mögliche Antwort: die print Funktion erlaubt es Zwischenergebnisse zu visualisieren.
 let calculateCylinderVolume radius laenge =
     let volumen = System.Math.PI * radius * radius * laenge
     printfn "Das Volumen des Zylinders ist: %f" volumen
-    // Der R�ckgabewert ist gleich dem Wert der an Volumen gebunden wurde
+    // Der Rückgabewert ist gleich dem Wert der an Volumen gebunden wurde
     volumen
 (**
 ### Task 3.8:  

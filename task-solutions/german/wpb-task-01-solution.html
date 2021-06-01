@@ -56,6 +56,11 @@
   Musterlösungen(deutsch)
 </li>             
 <li class="nav-item">
+  <a class="nav-link" href="/BIO-BTE-12-V-4-SOLUTIONS/task-solutions/german/wpb-task-01-solution.html">
+    01 Hello F#
+  </a>
+</li>             
+<li class="nav-item">
   <a class="nav-link" href="/BIO-BTE-12-V-4-SOLUTIONS/task-solutions/german/wpb-task-02-solution.html">
     02 Functions and Data types
   </a>
@@ -73,14 +78,6 @@
 <li class="nav-item">
   <a class="nav-link" href="/BIO-BTE-12-V-4-SOLUTIONS/task-solutions/german/wpb-task-05-solution.html">
     05 Programming with Objects
-  </a>
-</li>             
-<li class="nav-header">
-  Musterl�sungen(deutsch)
-</li>             
-<li class="nav-item">
-  <a class="nav-link" href="/BIO-BTE-12-V-4-SOLUTIONS/task-solutions/german/wpb-task-01-solution.html">
-    01 Hello F#
   </a>
 </li>             
 <li class="nav-header">
@@ -110,8 +107,8 @@ Output sollte 'val it: int = 10' sein.
 (Bei einzeiligem Code koennt ihr auch einfach die Zeile auswaehlen und Alt+Enter druecken ohne das alles markiert ist.)
 - <strong>In einem Notebook:</strong>
 Links von dem Feld unten das die '10' beinhaltet befindet sich ein 'play' Knopf.
-Dieser Knopf f�hrt beim dr�cken den jeweiligen Code-block aus und gibt das Ergebnis (hier: 10) darunter aus.
-<strong>Codebl�cke in notebooks m�ssen immer mit dem Wert enden, der ausgegben werden soll.</strong></p>
+Dieser Knopf führt beim drücken den jeweiligen Code-block aus und gibt das Ergebnis (hier: 10) darunter aus.
+<strong>Codeblöcke in notebooks müssen immer mit dem Wert enden, der ausgegben werden soll.</strong></p>
 <pre class="fssnip highlighted"><code lang="fsharp"><span class="n">10</span>
 </code></pre>
 <p>Auf diese Weise koennt ihr Code den ihr geschrieben habt, direkt testen und euch den Output ansehen.
@@ -152,7 +149,7 @@ Die Zwischenergebnisse sollten nicht im globalen Sichtbarkeitsbereich (Scope) li
     <span class="k">let</span> <span onmouseout="hideTip(event, 'fs8', 10)" onmouseover="showTip(event, 'fs8', 10)" class="fn">summeY</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs3', 11)" onmouseover="showTip(event, 'fs3', 11)" class="id">y</span> <span class="o">+</span> <span class="n">20</span>
     <span onmouseout="hideTip(event, 'fs7', 12)" onmouseover="showTip(event, 'fs7', 12)" class="fn">summeX</span> <span class="o">+</span> <span onmouseout="hideTip(event, 'fs8', 13)" onmouseover="showTip(event, 'fs8', 13)" class="fn">summeY</span>
 
-<span class="c">// oder k�rzer und ohne zwischenErgebnis:</span>
+<span class="c">// oder k&#252;rzer und ohne zwischenErgebnis:</span>
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs9', 14)" onmouseover="showTip(event, 'fs9', 14)" class="id">summeXY&#39;</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs1', 15)" onmouseover="showTip(event, 'fs1', 15)" class="id">x</span> <span class="o">+</span> <span class="n">10</span> <span class="o">+</span> <span onmouseout="hideTip(event, 'fs3', 16)" onmouseover="showTip(event, 'fs3', 16)" class="id">y</span> <span class="o">+</span> <span class="n">20</span>
 </code></pre>
 <h2><a name="Die-printfn-Funktion" class="anchor" href="#Die-printfn-Funktion">Die "printfn" - Funktion</a></h2>
@@ -206,11 +203,11 @@ Die Zwischenergebnisse sollten nicht im globalen Sichtbarkeitsbereich (Scope) li
 zurueckgibt UND zusaetzlich "Das Volumen des Zylinders ist: XX" in die Konsole printed. Wobei XX natuerlich
 das korrekte Volumen des Zylinders ist. (Der Output einer printfn Funktion ist Unit.)
 Warum kann es Sinn machen, Ergebnisse zu printen?</p>
-<pre class="fssnip highlighted"><code lang="fsharp"><span class="c">// M�gliche Antwort: die print Funktion erlaubt es Zwischenergebnisse zu visualisieren.</span>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="c">// M&#246;gliche Antwort: die print Funktion erlaubt es Zwischenergebnisse zu visualisieren.</span>
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs18', 37)" onmouseover="showTip(event, 'fs18', 37)" class="fn">calculateCylinderVolume</span> <span onmouseout="hideTip(event, 'fs19', 38)" onmouseover="showTip(event, 'fs19', 38)" class="fn">radius</span> <span onmouseout="hideTip(event, 'fs20', 39)" onmouseover="showTip(event, 'fs20', 39)" class="fn">laenge</span> <span class="o">=</span>
     <span class="k">let</span> <span onmouseout="hideTip(event, 'fs21', 40)" onmouseover="showTip(event, 'fs21', 40)" class="fn">volumen</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs22', 41)" onmouseover="showTip(event, 'fs22', 41)" class="id">System</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs23', 42)" onmouseover="showTip(event, 'fs23', 42)" class="rt">Math</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs24', 43)" onmouseover="showTip(event, 'fs24', 43)" class="id">PI</span> <span class="o">*</span> <span onmouseout="hideTip(event, 'fs19', 44)" onmouseover="showTip(event, 'fs19', 44)" class="fn">radius</span> <span class="o">*</span> <span onmouseout="hideTip(event, 'fs19', 45)" onmouseover="showTip(event, 'fs19', 45)" class="fn">radius</span> <span class="o">*</span> <span onmouseout="hideTip(event, 'fs20', 46)" onmouseover="showTip(event, 'fs20', 46)" class="fn">laenge</span>
     <span onmouseout="hideTip(event, 'fs10', 47)" onmouseover="showTip(event, 'fs10', 47)" class="fn">printfn</span> <span class="s">&quot;Das Volumen des Zylinders ist: </span><span class="pf">%f</span><span class="s">&quot;</span> <span onmouseout="hideTip(event, 'fs21', 48)" onmouseover="showTip(event, 'fs21', 48)" class="fn">volumen</span>
-    <span class="c">// Der R�ckgabewert ist gleich dem Wert der an Volumen gebunden wurde</span>
+    <span class="c">// Der R&#252;ckgabewert ist gleich dem Wert der an Volumen gebunden wurde</span>
     <span onmouseout="hideTip(event, 'fs21', 49)" onmouseover="showTip(event, 'fs21', 49)" class="fn">volumen</span>
 </code></pre>
 <h3><a name="Task-3-8" class="anchor" href="#Task-3-8">Task 3.8:</a></h3>
